@@ -1,5 +1,5 @@
-import { Repository } from "./components/Repository";
-import { Header } from "./components/Header";
+import { Repository } from "../components/Repository";
+import { Header } from "../components/Header";
 
 interface RepoProps{
   id: number;
@@ -9,7 +9,7 @@ interface RepoProps{
   language: string;  
 }
 
-import data from './repos.json'
+import data from '../repos.json'
 
 export default async function Home() {
   // const data = await fetch('https://api.github.com/users/joaovictor09/repos', {
