@@ -6,7 +6,7 @@ import { GithubLogo, InstagramLogo, LinkedinLogo } from "phosphor-react";
 export function Footer(){
   return (
     <footer className="w-full border-t border-zinc-500 flex justify-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      <div className="w-full max-w-7xl flex items-center justify-between p-5 text-zinc-100">
+      <div className="w-full max-w-7xl flex flex-col gap-2 sm:flex-row items-center justify-between p-5 text-zinc-100">
         <span>© {new Date().getFullYear()} John&apos;s Portfolio</span>
 
         <div className="flex items-center gap-2">

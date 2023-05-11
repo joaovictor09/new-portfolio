@@ -11,8 +11,8 @@ export function Header() {
 
   
   return (
-    <header className=" flex items-center justify-center w-full py-3 shadow-md border-b border-zinc-500">
-      <div className="flex gap-10 max-w-7xl">
+    <header className=" flex items-center justify-center w-full p-5 py-3 shadow-md border-b border-zinc-500">
+      <div className="flex items-center text-center gap-10 max-w-7xl">
         <Link 
           href="/" 
           className={`hover:text-zinc-100 transition-all border-b border-transparent p-2 ${pathname == '/' ? 'border-white' : 'hover:border-zinc-500 text-zinc-300'}`}
