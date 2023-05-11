@@ -10,7 +10,7 @@ export function Header() {
 
   
   return (
-    <header className=" flex items-center justify-center w-full py-3 shadow-md">
+    <header className=" flex items-center justify-center w-full py-3 shadow-md border-b border-zinc-500">
       <div className="flex gap-10 max-w-7xl">
         <Link 
           href="/" 

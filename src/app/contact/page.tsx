@@ -1,5 +1,7 @@
 export default function Contact() {
   return (
-    <h1>Contact</h1>
+    <div className="flex flex-1">
+      <h1>Contact</h1>
+    </div>
   )
 }

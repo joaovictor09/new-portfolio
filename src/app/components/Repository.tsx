@@ -11,13 +11,7 @@ interface RepositoryProps {
   language: string;
 }
 
-const languageColors = {
-  JavaScript: '#f1e05a',
-  TypeScript: '#3178c6',
-  HTML: '#e34c26'
-} as const
-
-export function Repository({ id, name,url,language, description }: RepositoryProps) {
+export function Repository({ name,url,language, description }: RepositoryProps) {
   return (
     <div className="flex flex-col gap-3 w-full border border-zinc-500 p-5 rounded-md hover:shadow-lg hover:shadow-gray-800 transition-all">
       <div className="w-full flex justify-between items-center text-zinc-100">

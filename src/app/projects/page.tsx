@@ -1,5 +1,4 @@
 import { Repository } from "../components/Repository";
-import { Header } from "../components/Header";
 
 interface RepoProps{
   id: number;
