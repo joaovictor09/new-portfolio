@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${inter.className} h-screen w-full bg-zinc-700 text-zinc-100 flex flex-col items-center gap-10`}>
+      <body className={`${inter.className} h-screen w-full bg-zinc-800 text-zinc-100 flex flex-col items-center gap-10`}>
         <Header />
         {children}
         <Footer />

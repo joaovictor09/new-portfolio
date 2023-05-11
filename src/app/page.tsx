@@ -20,7 +20,7 @@ export default async function Home() {
 
       {/* About me */}
 
-      <div className="flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
         <Image 
           src="https://github.com/joaovictor09.png?size=200" 
           width={200} 
@@ -53,7 +53,7 @@ export default async function Home() {
 
       {/* Skills */}
 
-      <div className="flex flex-col items-center mt-5 pt-5 text-zinc-100 gap-2 border-t border-zinc-500">
+      <div className="flex flex-col items-center mt-5 pt-5 text-zinc-100 gap-2 border-b border-zinc-500 bg-zinc-700 rounded p-5 shadow-md">
         <h2 className="font-bold text-lg">Skills</h2>
         <div className="grid grid-cols-5 gap-5">
           <SkillCard name="HTML" SkillIcon={HTMLIcon}/>
@@ -67,7 +67,7 @@ export default async function Home() {
 
       {/* Contact */}
 
-      <div className="flex justify-center mt-5 pt-5 border-t border-zinc-500">
+      <div className="flex justify-center mt-5 pt-5 border-b border-zinc-500 bg-zinc-700 rounded p-5 shadow-md">
         <Contact />
       </div>
 
