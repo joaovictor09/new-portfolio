@@ -9,7 +9,7 @@ import CssIcon from './assets/CSS3.svg';
 import HTMLIcon from './assets/HTML5.svg';
 import JavaScriptIcon from './assets/JavaScript.svg';
 import NextIcon from './assets/Next.svg';
-import NodeJsIcon from './assets/nodejs.svg';
+import NodeJsIcon from './assets/Nodejs.svg';
 import ReactIcon from './assets/React.svg';
 import { Contact } from "./components/Contact";
 
