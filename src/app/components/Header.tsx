@@ -10,23 +10,23 @@ export function Header() {
 
   
   return (
-    <header className="flex items-center justify-center w-full py-3 shadow-md">
-      <div className="flex gap-10">
+    <header className=" flex items-center justify-center w-full py-3 shadow-md">
+      <div className="flex gap-10 max-w-7xl">
         <Link 
           href="/" 
-          className={`hover:text-zinc-300 hover:border-zinc-300 transition-all border-b border-transparent p-2 ${pathname == '/' ? 'border-white' : ''}`}
+          className={`hover:text-zinc-300 transition-all border-b border-transparent p-2 ${pathname == '/' ? 'border-white' : 'hover:border-zinc-500'}`}
         >
-          Home
+          About me
         </Link>
         <Link 
           href="/projects"
-          className={`hover:text-zinc-300 hover:border-zinc-300 transition-all border-b border-transparent p-2 ${pathname == '/projects' ? 'border-white' : ''}`}
+          className={`hover:text-zinc-300 transition-all border-b border-transparent p-2 ${pathname == '/projects' ? 'border-white' : 'hover:border-zinc-500'}`}
         >
           Projects
         </Link>
         <Link 
           href="/contact"
-          className="hover:text-zinc-300 hover:border-zinc-300 transition-all border-b border-transparent p-2 ${pathname == '/contact' ? 'border-white' : ''}"
+          className={`hover:text-zinc-300 transition-all border-b border-transparent p-2 ${pathname == '/contact' ? 'border-white' : 'hover:border-zinc-500'}`}
         >
           Contact
         </Link>
