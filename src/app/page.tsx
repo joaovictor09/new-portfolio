@@ -55,7 +55,7 @@ export default async function Home() {
 
       <div className="flex flex-col items-center mt-5 pt-5 text-zinc-100 gap-2 border-b border-zinc-500 bg-zinc-700 rounded p-5 shadow-md">
         <h2 className="font-bold text-lg">Skills</h2>
-        <div className="grid md:grid-cols-5 grid-cols-1 gap-5 w-full">
+        <div className="grid sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-5 grid-cols-1 gap-5 w-full">
           <SkillCard name="HTML" SkillIcon={HTMLIcon}/>
           <SkillCard name="CSS" SkillIcon={CssIcon}/>
           <SkillCard name="JavaScript" SkillIcon={JavaScriptIcon}/>
