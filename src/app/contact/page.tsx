@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { ErrorMessage } from '../components/ErrorMessage'
 import { useState } from 'react'
 import { CircleNotch, Check, WarningCircle } from 'phosphor-react'
+import Cookies from 'universal-cookie';
 
 interface IFormInput {
   name: string;
@@ -22,8 +23,11 @@ const schema = z.object({
 
 export default function Contact() {
 
-  const formSubmittedSessionStorage = JSON.parse(sessionStorage.getItem('formSubmitted') || 'false')
-  const [formSubmitted, setFormSubmitted] = useState(formSubmittedSessionStorage)
+  const cookies = new Cookies();
+
+  const formSubmittedCookies = cookies.get('formSubmitted')
+
+  const [formSubmitted, setFormSubmitted] = useState(formSubmittedCookies || false)
   const [loading, setLoading] = useState(false)
   const [formError, setFormError] = useState(false)
 
@@ -38,7 +42,7 @@ export default function Contact() {
     .then(response => {
       setFormError(false);
       setFormSubmitted(true);
-      sessionStorage.setItem('formSubmitted', 'true');
+      cookies.set('formSubmitted', true, { path: '/' });
     }, err => {
       console.log(err);
       setFormError(true);
