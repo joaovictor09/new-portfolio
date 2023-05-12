@@ -25,9 +25,9 @@ export default function Contact() {
 
   const cookies = new Cookies();
 
-  const formSubmittedCookies = cookies.get('formSubmitted')
+  // const formSubmittedCookies = cookies.get('formSubmitted')
 
-  const [formSubmitted, setFormSubmitted] = useState(formSubmittedCookies || false)
+  const [formSubmitted, setFormSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [formError, setFormError] = useState(false)
 
@@ -42,7 +42,7 @@ export default function Contact() {
     .then(response => {
       setFormError(false);
       setFormSubmitted(true);
-      cookies.set('formSubmitted', true, { path: '/' });
+      // cookies.set('formSubmitted', true, { path: '/' });
     }, err => {
       console.log(err);
       setFormError(true);
@@ -65,7 +65,7 @@ export default function Contact() {
   };
   
   return (
-    <div className="w-full max-w-lg flex flex-1 items-center justify-center">
+    <div className="w-full max-w-lg flex flex-1 items-center justify-center px-5">
       <div className='w-full flex flex-col gap-10 items-center bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md'>
         <h1 className="text-xl font-bold">Contact Us 👋</h1>
 
