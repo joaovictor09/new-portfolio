@@ -29,7 +29,7 @@ export default async function Home() {
           className="rounded-full"
         />
         <div className="max-w-xl text-center flex flex-col gap-2">
-          <h1 className="text-xl font-bold">Hey, I&apos;m John 👋</h1>
+          <h1 className="text-xl font-bold flex items-center justify-center">Hey, I&apos;m John <div className="animate-wiggle"> 👋</div></h1>
           <p className="text-zinc-400">
             I&apos;m a software developer based in Criciúma, Santa Catarina. I specialize in building (and occasionally designing)
             exceptional websites, applications, and everything in between.
