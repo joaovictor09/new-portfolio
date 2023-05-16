@@ -35,11 +35,11 @@ export function Repository({
       <span
         className={`before:content-[''] before:inline-block before:p-1 before:w-1 before:h-1 before:rounded-full before:mr-2 
         ${
-          language == 'TypeScript'
+          language === 'TypeScript'
             ? 'before:bg-[#3178c6]'
-            : language == 'JavaScript'
+            : language === 'JavaScript'
             ? 'before:bg-[#f1e05a]'
-            : language == 'HTML'
+            : language === 'HTML'
             ? 'before:bg-[#e34c26]'
             : 'before:bg-zinc-400'
         }
