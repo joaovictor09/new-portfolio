@@ -1,6 +1,6 @@
 'use client'
 
-import Image, { ImageLoader, ImageLoaderProps } from 'next/image'
+import Image, { ImageLoaderProps } from 'next/image'
 import Link from 'next/link'
 import { GithubLogo, InstagramLogo, LinkedinLogo } from 'phosphor-react'
 
