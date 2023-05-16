@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.className} h-screen w-full bg-zinc-800 text-zinc-100 flex flex-col items-center gap-10`}
+        className={`${inter.className} h-screen w-full bg-zinc-800 text-zinc-100 flex flex-col items-center`}
       >
         <Header />
         {children}

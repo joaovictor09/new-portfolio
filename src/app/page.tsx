@@ -19,7 +19,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="max-w-7xl w-full flex-1 flex-col items-center px-5">
+    <div className="max-w-7xl w-full flex-1 flex-col items-center px-5 my-10">
       {/* About me */}
 
       <div className="flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
