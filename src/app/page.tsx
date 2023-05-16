@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import Image, { ImageLoader, ImageLoaderProps } from 'next/image'
 import Link from 'next/link'
 import { GithubLogo, InstagramLogo, LinkedinLogo } from 'phosphor-react'
 
@@ -14,13 +14,18 @@ import ReactIcon from './assets/React.svg'
 import { Contact } from './components/Contact'
 
 export default async function Home() {
+  const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
+    return `https://github.com/${src}?size=${width}&q=${quality || 75}`
+  }
+
   return (
     <div className="max-w-7xl w-full flex-1 flex-col items-center px-5">
       {/* About me */}
 
       <div className="flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
         <Image
-          src="https://github.com/joaovictor09.png?size=200"
+          src="joaovictor09.png"
+          loader={imageLoader}
           width={200}
           height={200}
           alt="My profile photo made by a IA"
