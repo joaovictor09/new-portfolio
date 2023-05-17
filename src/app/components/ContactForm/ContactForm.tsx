@@ -2,7 +2,7 @@
 
 import emailjs from '@emailjs/browser'
 import { CircleNotch, Check, WarningCircle } from 'phosphor-react'
-import { ErrorMessage } from './ErrorMessage'
+import { ErrorMessage } from './components/ErrorMessage'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'

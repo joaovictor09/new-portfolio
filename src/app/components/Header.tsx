@@ -39,6 +39,16 @@ export function Header() {
         >
           Contact
         </Link>
+        <Link
+          href="/comments"
+          className={`hover:text-zinc-100 transition-all border-b border-transparent p-2 ${
+            pathname === '/comments'
+              ? 'border-white'
+              : 'hover:border-zinc-500 text-zinc-300'
+          }`}
+        >
+          Comments
+        </Link>
       </div>
     </header>
   )
