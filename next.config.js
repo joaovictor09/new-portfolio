@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  target: 'serverless',
   images: {
     remotePatterns: [
       {
@@ -7,9 +8,9 @@ const nextConfig = {
         hostname: 'github.com',
         port: '',
         pathname: '/**',
-      }
-    ]
-  }
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
