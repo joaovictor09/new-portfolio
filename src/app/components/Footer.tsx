@@ -12,6 +12,7 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <Link
             href="https://www.instagram.com/jooao.victor_/"
+            aria-label="My instagram profile"
             className="hover:text-zinc-400 transition-all"
             target="_blank"
           >
@@ -20,12 +21,14 @@ export function Footer() {
           <Link
             href="https://github.com/joaovictor09"
             className="hover:text-zinc-400 transition-all"
+            aria-label="My github profile"
             target="_blank"
           >
             <GithubLogo size={24} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/joaovictor09/"
+            aria-label="My linkedin profile"
             className="hover:text-zinc-400 transition-all"
             target="_blank"
           >

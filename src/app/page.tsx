@@ -1,34 +1,31 @@
 'use client'
 
-import Image, { ImageLoaderProps } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { GithubLogo, InstagramLogo, LinkedinLogo } from 'phosphor-react'
 
-import { SkillCard } from './components/SkillCard'
 import CssIcon from './assets/CSS3.svg'
 import HTMLIcon from './assets/HTML5.svg'
 import JavaScriptIcon from './assets/JavaScript.svg'
 import NextIcon from './assets/Next.svg'
 import NodeJsIcon from './assets/Nodejs.svg'
 import ReactIcon from './assets/React.svg'
+import githubPhoto from './assets/github-profile-image.jpeg'
+
+import { SkillCard } from './components/SkillCard'
 import { Contact } from './components/Contact'
 
 export default async function Home() {
-  const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
-    return `https://github.com/${src}?size=${width}&q=${quality || 75}`
-  }
-
   return (
     <div className="max-w-7xl w-full flex-1 flex-col items-center px-5 my-10">
       {/* About me */}
 
       <div className="flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
         <Image
-          src="joaovictor09.png"
-          loader={imageLoader}
+          src={githubPhoto}
           width={200}
           height={200}
-          alt="My profile photo made by a IA"
+          alt="My profile photo"
           className="rounded-full"
         />
         <div className="max-w-xl text-center flex flex-col gap-2">
