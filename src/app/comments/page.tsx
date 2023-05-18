@@ -13,7 +13,7 @@ const commentsSchema = z
 type commentsProps = z.infer<typeof commentsSchema>
 
 async function getComments() {
-  const res = await fetch('http://localhost:3000/api/comments', {
+  const res = await fetch('https://joaovictor09.dev/api/comments', {
     cache: 'no-store',
   })
 
