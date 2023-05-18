@@ -1,6 +1,7 @@
 export function CommentFormSkeleton() {
   return (
-    <div className="w-full flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
+    <div className="w-full max-w-xl flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
+      <h2>Leave your comment 😉</h2>
       <input
         disabled
         className={`h-fit w-full p-2 bg-zinc-600 rounded border animate-pulse`}

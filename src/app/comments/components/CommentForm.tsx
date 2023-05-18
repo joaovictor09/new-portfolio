@@ -5,7 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
 import { CircleNotch, Check, WarningCircle } from 'phosphor-react'
-// import { getComments } from '@/lib/getComments'
+import { checkEnvironment } from '@/app/lib/checkEnvironment'
+import { useRouter } from 'next/navigation'
 
 const commentFormSchema = z.object({
   user: z.string().nonempty(),
@@ -19,6 +20,8 @@ export function CommentForm() {
   const [loading, setLoading] = useState(false)
   const [formError, setFormError] = useState(false)
 
+  const router = useRouter()
+
   const {
     register,
     handleSubmit,
@@ -31,7 +34,7 @@ export function CommentForm() {
   async function handleCommentFormSubmit({ user, comment }: commentFormValue) {
     setLoading(true)
 
-    await fetch('http://localhost:3000/api/comments', {
+    await fetch(checkEnvironment().concat('/api/comments'), {
       method: 'POST',
       body: JSON.stringify({ user, comment }),
     }).then(
@@ -39,7 +42,7 @@ export function CommentForm() {
         reset()
         setFormError(false)
         setFormSubmitted(true)
-        // cookies.set('formSubmitted', true, { path: '/' });
+        router.refresh()
       },
       (err) => {
         console.log(err)
@@ -53,7 +56,7 @@ export function CommentForm() {
   return (
     <form
       onSubmit={handleSubmit(handleCommentFormSubmit)}
-      className="w-full flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md"
+      className="w-full max-w-xl flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md"
     >
       <h2>Leave your comment 😉</h2>
       <input

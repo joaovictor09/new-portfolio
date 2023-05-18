@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { checkEnvironment } from './checkEnvironment'
 
 const commentsSchema = z
   .object({
@@ -8,10 +9,14 @@ const commentsSchema = z
   })
   .array()
 
+export type commentsPropsType = z.infer<typeof commentsSchema>
+
 export async function getComments() {
-  const res = await fetch('https://joaovictor09.dev/api/comments', {
+  const res = await fetch(checkEnvironment().concat('/api/comments'), {
     cache: 'no-store',
   })
+
+  console.log(checkEnvironment().concat('/api/comments'))
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
