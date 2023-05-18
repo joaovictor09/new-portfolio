@@ -12,13 +12,19 @@ export default async function Comments() {
       <CommentForm />
 
       <div className="w-full flex flex-col gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
-        {comments.map((comment) => (
-          <Comment
-            key={comment.id}
-            comment={comment.comment}
-            user={comment.user}
-          />
-        ))}
+        {comments.length >= 1 ? (
+          comments.map((comment) => (
+            <Comment
+              key={comment.id}
+              comment={comment.comment}
+              user={comment.user}
+            />
+          ))
+        ) : (
+          <div className="flex items-center justify-center w-full border border-zinc-500 bg-zinc-700 p-5 rounded-md transition-all hover:scale-105">
+            <span>Sem comentários</span>
+          </div>
+        )}
       </div>
     </main>
   )

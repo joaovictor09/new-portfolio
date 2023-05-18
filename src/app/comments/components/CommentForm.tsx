@@ -3,6 +3,8 @@
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { useState } from 'react'
+import { CircleNotch, Check, WarningCircle } from 'phosphor-react'
 // import { getComments } from '@/lib/getComments'
 
 const commentFormSchema = z.object({
@@ -13,6 +15,10 @@ const commentFormSchema = z.object({
 type commentFormValue = z.infer<typeof commentFormSchema>
 
 export function CommentForm() {
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [formError, setFormError] = useState(false)
+
   const {
     register,
     handleSubmit,
@@ -23,13 +29,25 @@ export function CommentForm() {
   })
 
   async function handleCommentFormSubmit({ user, comment }: commentFormValue) {
+    setLoading(true)
+
     await fetch('http://localhost:3000/api/comments', {
       method: 'POST',
       body: JSON.stringify({ user, comment }),
-    }).then((res) => {
-      reset()
-      // getComments()
-    })
+    }).then(
+      (response) => {
+        reset()
+        setFormError(false)
+        setFormSubmitted(true)
+        // cookies.set('formSubmitted', true, { path: '/' });
+      },
+      (err) => {
+        console.log(err)
+        setFormError(true)
+      },
+    )
+
+    setLoading(false)
   }
 
   return (
@@ -52,6 +70,29 @@ export function CommentForm() {
           errors.comment ? 'border-red-500' : 'border-zinc-400'
         } h-fit w-full p-2 bg-transparent rounded border focus:border-transparent focus:outline-1 focus:outline outline-white placeholder:text-zinc-400`}
       />
+
+      <div>
+        {loading && (
+          <span className="flex items-center gap-2 mt-2">
+            <CircleNotch className="animate-spin" />
+            Enviando Form...
+          </span>
+        )}
+
+        {formSubmitted && (
+          <span className="flex items-center gap-2 mt-2">
+            <Check />
+            Formulário Enviado
+          </span>
+        )}
+
+        {formError && (
+          <span className="flex items-center gap-2 mt-2">
+            <WarningCircle />
+            Erro no envio, tente novamente
+          </span>
+        )}
+      </div>
 
       <button className="disabled:cursor-not-allowed disabled:bg-transparent disabled:text-zinc-100 mt-2 w-max hover:scale-105 px-10 py-3 bg-zinc-200 text-black font-bold border border-zinc-500 rounded-lg hover:shadow-md hover:bg-zinc-700 hover:text-zinc-100 transition-all">
         Send Comment
