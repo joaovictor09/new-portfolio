@@ -1,7 +1,5 @@
-'use client'
-
 import Link from 'next/link'
-import { GithubLogo, InstagramLogo, LinkedinLogo } from 'phosphor-react'
+import { Github, Instagram, Linkedin } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -16,7 +14,7 @@ export function Footer() {
             className="hover:text-zinc-400 transition-all"
             target="_blank"
           >
-            <InstagramLogo size={24} />
+            <Instagram size={24} />
           </Link>
           <Link
             href="https://github.com/joaovictor09"
@@ -24,7 +22,7 @@ export function Footer() {
             aria-label="My github profile"
             target="_blank"
           >
-            <GithubLogo size={24} />
+            <Github size={24} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/joaovictor09/"
@@ -32,7 +30,7 @@ export function Footer() {
             className="hover:text-zinc-400 transition-all"
             target="_blank"
           >
-            <LinkedinLogo size={24} />
+            <Linkedin size={24} />
           </Link>
         </div>
       </div>

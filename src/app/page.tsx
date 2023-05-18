@@ -1,8 +1,6 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { GithubLogo, InstagramLogo, LinkedinLogo } from 'phosphor-react'
+import { Github, Instagram, Linkedin } from 'lucide-react'
 
 import CssIcon from './assets/CSS3.svg'
 import HTMLIcon from './assets/HTML5.svg'
@@ -47,21 +45,21 @@ export default async function Home() {
             className="transition-all hover:scale-110 hover:text-zinc-300"
             target="_blank"
           >
-            <InstagramLogo size={24} />
+            <Instagram size={24} />
           </Link>
           <Link
             href="https://github.com/joaovictor09"
             className="transition-all hover:scale-110 hover:text-zinc-300"
             target="_blank"
           >
-            <GithubLogo size={24} />
+            <Github size={24} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/joaovictor09/"
             className="transition-all hover:scale-110 hover:text-zinc-300"
             target="_blank"
           >
-            <LinkedinLogo size={24} />
+            <Linkedin size={24} />
           </Link>
         </div>
       </div>
