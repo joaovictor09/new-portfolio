@@ -1,12 +1,12 @@
 'use client'
 
-import emailjs from '@emailjs/browser'
 import { CircleNotch, Check, WarningCircle } from 'phosphor-react'
 import { ErrorMessage } from './components/ErrorMessage'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import { checkEnvironment } from '@/app/lib/checkEnvironment'
 
 const sendMessageFormSchema = z.object({
   name: z
@@ -41,28 +41,25 @@ export function ContactForm() {
     name,
   }: SendMessageFormData) {
     setLoading(true)
-    await emailjs
-      .send(
-        'service_xb9td8u',
-        'template_33n7uut',
-        {
-          from_name: name,
-          message,
-          email,
-        },
-        'hpe2AUU2oPIgbO4ky',
-      )
-      .then(
-        (response) => {
-          setFormError(false)
-          setFormSubmitted(true)
-          // cookies.set('formSubmitted', true, { path: '/' });
-        },
-        (err) => {
-          console.log(err)
-          setFormError(true)
-        },
-      )
+    const bodyData = JSON.stringify({
+      name,
+      message,
+      email,
+    })
+    await fetch(checkEnvironment().concat('/api/contact'), {
+      cache: 'no-store',
+      method: 'POST',
+      body: bodyData,
+    }).then(
+      (response) => {
+        setFormError(false)
+        setFormSubmitted(true)
+      },
+      (err) => {
+        console.log(err)
+        setFormError(true)
+      },
+    )
     setLoading(false)
   }
 
