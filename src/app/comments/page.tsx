@@ -10,21 +10,20 @@ const commentsSchema = z
   })
   .array()
 
-async function getComments() {
-  const res = await fetch('http://localhost:3000/api/comments', {
-    cache: 'no-store',
-  })
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-
-  const data = commentsSchema.parse(await res.json())
-
-  return data
-}
-
 export default async function Comments() {
+  async function getComments() {
+    const res = await fetch('http://localhost:3000/api/comments', {
+      cache: 'no-store',
+    })
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch data')
+    }
+
+    const data = commentsSchema.parse(await res.json())
+
+    return data
+  }
   const comments = await getComments()
 
   return (
