@@ -55,6 +55,7 @@ export function CommentForm() {
       onSubmit={handleSubmit(handleCommentFormSubmit)}
       className="w-full flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md"
     >
+      <h2>Leave your comment 😉</h2>
       <input
         type="text"
         placeholder="Your name"

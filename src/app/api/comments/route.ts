@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '@/app/lib/prisma'
 import { NextResponse } from 'next/server'
 import { z } from 'zod'
-
-const prisma = new PrismaClient()
 
 const commentsSchema = z.object({
   user: z.string().nonempty(),
