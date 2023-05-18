@@ -10,7 +10,7 @@ const commentsSchema = z
   })
   .array()
 
-export async function getComments() {
+async function getComments() {
   const res = await fetch('http://localhost:3000/api/comments', {
     cache: 'no-store',
   })
