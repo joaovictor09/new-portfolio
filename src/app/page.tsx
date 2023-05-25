@@ -8,6 +8,7 @@ import JavaScriptIcon from '../assets/JavaScript.svg'
 import NextIcon from '../assets/Next.svg'
 import NodeJsIcon from '../assets/Nodejs.svg'
 import ReactIcon from '../assets/React.svg'
+import TypescriptIcon from '../assets/Typescript.svg'
 import githubPhoto from '../assets/github-profile-image.jpeg'
 
 import { SkillCard } from './components/SkillCard'
@@ -75,6 +76,7 @@ export default async function Home() {
           <SkillCard name="ReactJs" SkillIcon={ReactIcon} />
           <SkillCard name="Nextjs" SkillIcon={NextIcon} />
           <SkillCard name="Node" SkillIcon={NodeJsIcon} />
+          <SkillCard name="Typescript" SkillIcon={TypescriptIcon} />
         </div>
       </div>
 
