@@ -9,7 +9,7 @@ export default function Loading() {
       <CommentFormSkeleton />
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
-        {Array.from({ length: 8 }).map((it, index) => (
+        {Array.from({ length: 4 }).map((it, index) => (
           <CommentSkeleton key={index} />
         ))}
       </div>
