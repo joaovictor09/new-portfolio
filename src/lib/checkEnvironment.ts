@@ -1,6 +1,7 @@
 export const checkEnvironment = () => {
   const baseUrl =
-    process.env.NODE_ENV === 'development'
+    // eslint-disable-next-line
+    process.env.NODE_ENV == 'development'
       ? 'http://localhost:3000'
       : 'https://joaovictor09.dev'
 
