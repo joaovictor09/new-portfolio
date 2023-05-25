@@ -1,6 +1,6 @@
 import { Comment } from './components/Comment'
 import { CommentForm } from './components/CommentForm'
-import { getComments } from '../lib/getComments'
+import { getComments } from '../../lib/getComments'
 
 export default async function Comments() {
   const comments = await getComments()
@@ -11,7 +11,7 @@ export default async function Comments() {
 
       <CommentForm />
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 bg-zinc-700/90 rounded p-5 border-b border-zinc-500 shadow-md">
         {comments.length >= 1 ? (
           comments.map((comment) => (
             <Comment

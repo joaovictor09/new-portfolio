@@ -18,7 +18,7 @@ export function Repository({
   description,
 }: RepositoryProps) {
   return (
-    <div className="flex flex-col gap-3 w-full border border-zinc-500 bg-zinc-700 p-5 rounded-md transition-all hover:scale-105">
+    <div className="flex flex-col gap-3 w-full border border-zinc-500 bg-zinc-700/80 p-5 rounded-md transition-all hover:scale-105 hover:bg-[url(../assets/bg-stars.svg)]">
       <div className="w-full flex justify-between items-center text-zinc-100 gap-5">
         <h1 className="text-lg font-bold">{name}</h1>
         <Link

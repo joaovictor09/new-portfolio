@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
 import { CircleNotch, Check, WarningCircle } from 'phosphor-react'
-import { checkEnvironment } from '@/app/lib/checkEnvironment'
+import { checkEnvironment } from '@/lib/checkEnvironment'
 import { useRouter } from 'next/navigation'
 
 const commentFormSchema = z.object({
@@ -56,7 +56,7 @@ export function CommentForm() {
   return (
     <form
       onSubmit={handleSubmit(handleCommentFormSubmit)}
-      className="w-full max-w-xl flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md"
+      className="w-full max-w-xl flex flex-col items-center gap-5 bg-zinc-700/90 rounded p-5 border-b border-zinc-500 shadow-md"
     >
       <h2>Leave your comment 😉</h2>
       <input

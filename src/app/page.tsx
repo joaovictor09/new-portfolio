@@ -2,13 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 
-import CssIcon from './assets/CSS3.svg'
-import HTMLIcon from './assets/HTML5.svg'
-import JavaScriptIcon from './assets/JavaScript.svg'
-import NextIcon from './assets/Next.svg'
-import NodeJsIcon from './assets/Nodejs.svg'
-import ReactIcon from './assets/React.svg'
-import githubPhoto from './assets/github-profile-image.jpeg'
+import CssIcon from '../assets/CSS3.svg'
+import HTMLIcon from '../assets/HTML5.svg'
+import JavaScriptIcon from '../assets/JavaScript.svg'
+import NextIcon from '../assets/Next.svg'
+import NodeJsIcon from '../assets/Nodejs.svg'
+import ReactIcon from '../assets/React.svg'
+import githubPhoto from '../assets/github-profile-image.jpeg'
 
 import { SkillCard } from './components/SkillCard'
 import { Contact } from './components/Contact'
@@ -18,7 +18,7 @@ export default async function Home() {
     <div className="max-w-7xl w-full flex-1 flex-col items-center px-5 my-10">
       {/* About me */}
 
-      <div className="flex flex-col items-center gap-5 bg-zinc-700 rounded p-5 border-b border-zinc-500 shadow-md">
+      <div className="flex flex-col items-center gap-5 bg-zinc-700/80 rounded p-5 border-b border-zinc-500 shadow-md">
         <Image
           src={githubPhoto}
           width={200}
@@ -66,7 +66,7 @@ export default async function Home() {
 
       {/* Skills */}
 
-      <div className="flex flex-col items-center mt-5 pt-5 text-zinc-100 gap-2 border-b border-zinc-500 bg-zinc-700 rounded p-5 shadow-md">
+      <div className="flex flex-col items-center mt-5 pt-5 text-zinc-100 gap-2 border-b border-zinc-500 bg-zinc-700/80 rounded p-5 shadow-md">
         <h2 className="font-bold text-lg">Skills</h2>
         <div className="grid sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-5 grid-cols-1 gap-5 w-full">
           <SkillCard name="HTML" SkillIcon={HTMLIcon} />
@@ -80,7 +80,7 @@ export default async function Home() {
 
       {/* Contact */}
 
-      <div className="flex justify-center mt-5 pt-5 border-b border-zinc-500 bg-zinc-700 rounded p-5 shadow-md">
+      <div className="flex justify-center mt-5 pt-5 border-b border-zinc-500 bg-zinc-700/80 rounded p-5 shadow-md">
         <Contact />
       </div>
     </div>

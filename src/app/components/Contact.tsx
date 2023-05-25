@@ -11,7 +11,7 @@ export function Contact() {
       </p>
       <Link
         href="/contact"
-        className="mt-2 w-max hover:scale-105 px-10 py-5 bg-zinc-200 text-black font-bold border border-zinc-500 rounded-lg hover:shadow-md hover:bg-zinc-700 hover:text-zinc-100 transition-all"
+        className="mt-2 w-max hover:scale-105 px-10 py-5 bg-zinc-200 text-black font-bold border border-zinc-500 rounded-lg hover:shadow-md hover:bg-[url(../assets/bg-stars.svg)] hover:bg-transparent hover:text-zinc-100 transition-all"
       >
         Say Hello
       </Link>

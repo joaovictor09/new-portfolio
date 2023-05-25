@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-import { checkEnvironment } from '@/app/lib/checkEnvironment'
+import { checkEnvironment } from '@/lib/checkEnvironment'
 
 const sendMessageFormSchema = z.object({
   name: z
@@ -147,7 +147,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={formSubmitted}
-        className="disabled:cursor-not-allowed disabled:bg-transparent disabled:text-zinc-100 mt-2 w-max hover:scale-105 px-10 py-3 bg-zinc-200 text-black font-bold border border-zinc-500 rounded-lg hover:shadow-md hover:bg-zinc-700 hover:text-zinc-100 transition-all"
+        className="disabled:cursor-not-allowed disabled:bg-transparent disabled:text-zinc-100 mt-2 w-max hover:scale-105 px-10 py-3 bg-zinc-200 text-black font-bold border border-zinc-500 rounded-lg hover:shadow-md hover:bg-[url(../assets/bg-stars.svg)] hover:bg-transparent hover:text-zinc-100 transition-all"
       >
         Submit
       </button>
