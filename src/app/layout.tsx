@@ -19,11 +19,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.className} h-screen w-full bg-zinc-800 text-zinc-100 flex flex-col items-center relative bg-[url(../assets/bg-stars.svg)]`}
+        className={`${inter.className} relative flex h-screen w-full flex-col items-center bg-zinc-800 bg-[url(../assets/bg-stars.svg)] text-zinc-100`}
       >
         <Analytics />
         <Header />
-        <div className="-z-10 absolute right-1/2 top-1/2 h-1/4 w-1/3 -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-80 blur-full" />
+        <div className="absolute right-1/2 top-1/2 -z-10 h-1/4 w-1/3 -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-80 blur-full" />
 
         {children}
         <Footer />

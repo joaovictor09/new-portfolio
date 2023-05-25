@@ -18,11 +18,11 @@ export function Repository({
   description,
 }: RepositoryProps) {
   return (
-    <div className="flex flex-col gap-3 w-full border border-zinc-500 bg-zinc-700/80 p-5 rounded-md transition-all hover:scale-105 hover:bg-[url(../assets/bg-stars.svg)]">
-      <div className="w-full flex justify-between items-center text-zinc-100 gap-5">
+    <div className="flex w-full flex-col gap-3 rounded-md border border-zinc-500 bg-zinc-700/80 p-5 transition-all hover:scale-105 hover:bg-[url(../assets/bg-stars.svg)]">
+      <div className="flex w-full items-center justify-between gap-5 text-zinc-100">
         <h1 className="text-lg font-bold">{name}</h1>
         <Link
-          className="hover:text-zinc-400 transition-all"
+          className="transition-all hover:text-zinc-400"
           target="_blank"
           href={url}
         >
@@ -33,7 +33,7 @@ export function Repository({
         {description == null ? 'Sem descrição' : description}
       </p>
       <span
-        className={`before:content-[''] before:inline-block before:p-1 before:w-1 before:h-1 before:rounded-full before:mr-2 
+        className={`before:mr-2 before:inline-block before:h-1 before:w-1 before:rounded-full before:p-1 before:content-[''] 
         ${
           language === 'TypeScript'
             ? 'before:bg-[#3178c6]'

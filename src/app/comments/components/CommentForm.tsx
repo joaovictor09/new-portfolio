@@ -56,7 +56,7 @@ export function CommentForm() {
   return (
     <form
       onSubmit={handleSubmit(handleCommentFormSubmit)}
-      className="w-full max-w-xl flex flex-col items-center gap-5 bg-zinc-700/90 rounded p-5 border-b border-zinc-500 shadow-md"
+      className="flex w-full max-w-xl flex-col items-center gap-5 rounded border-b border-zinc-500 bg-zinc-700/90 p-5 shadow-md"
     >
       <h2>Leave your comment 😉</h2>
       <input
@@ -65,40 +65,40 @@ export function CommentForm() {
         {...register('user')}
         className={`${
           errors.user ? 'border-red-500' : 'border-zinc-400'
-        } h-fit w-full p-2 bg-transparent rounded border focus:border-transparent focus:outline-1 focus:outline outline-white placeholder:text-zinc-400`}
+        } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
       />
       <textarea
         placeholder="Your comment"
         {...register('comment')}
         className={`${
           errors.comment ? 'border-red-500' : 'border-zinc-400'
-        } h-fit w-full p-2 bg-transparent rounded border focus:border-transparent focus:outline-1 focus:outline outline-white placeholder:text-zinc-400`}
+        } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
       />
 
       <div>
         {loading && (
-          <span className="flex items-center gap-2 mt-2">
+          <span className="mt-2 flex items-center gap-2">
             <CircleNotch className="animate-spin" />
             Enviando Form...
           </span>
         )}
 
         {formSubmitted && (
-          <span className="flex items-center gap-2 mt-2">
+          <span className="mt-2 flex items-center gap-2">
             <Check />
             Formulário Enviado
           </span>
         )}
 
         {formError && (
-          <span className="flex items-center gap-2 mt-2">
+          <span className="mt-2 flex items-center gap-2">
             <WarningCircle />
             Erro no envio, tente novamente
           </span>
         )}
       </div>
 
-      <button className="disabled:cursor-not-allowed disabled:bg-transparent disabled:text-zinc-100 mt-2 w-max hover:scale-105 px-10 py-3 bg-zinc-200 text-black font-bold border border-zinc-500 rounded-lg hover:shadow-md hover:bg-zinc-700 hover:text-zinc-100 transition-all">
+      <button className="mt-2 w-max rounded-lg border border-zinc-500 bg-zinc-200 px-10 py-3 font-bold text-black transition-all hover:scale-105 hover:bg-zinc-700 hover:text-zinc-100 hover:shadow-md disabled:cursor-not-allowed disabled:bg-transparent disabled:text-zinc-100">
         Send Comment
       </button>
     </form>

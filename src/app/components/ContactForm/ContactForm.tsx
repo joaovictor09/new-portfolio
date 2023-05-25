@@ -91,16 +91,16 @@ export function ContactForm() {
 
   return (
     <form
-      className="w-full flex flex-col gap-2 items-center"
+      className="flex w-full flex-col items-center gap-2"
       onSubmit={handleSubmit(sendMessageFormHandle)}
     >
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex w-full flex-col gap-2">
         <input
           {...register('name')}
           type="text"
           className={`${
             errors.name ? 'border-red-500' : 'border-zinc-400'
-          } h-fit w-full p-2 bg-transparent rounded border focus:border-transparent focus:outline-1 focus:outline outline-white placeholder:text-zinc-400`}
+          } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
           placeholder="Your name"
         />
         {errors.name && <ErrorMessage message={errors.name.message} />}
@@ -110,7 +110,7 @@ export function ContactForm() {
           type="email"
           className={`${
             errors.email ? 'border-red-500' : 'border-zinc-400'
-          } h-fit w-full p-2 bg-transparent rounded border focus:border-transparent focus:outline-1 focus:outline outline-white placeholder:text-zinc-400`}
+          } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
           placeholder="Your email"
         />
         {errors.email && <ErrorMessage message={errors.email.message} />}
@@ -119,7 +119,7 @@ export function ContactForm() {
           {...register('message')}
           className={`${
             errors.message ? 'border-red-500' : 'border-zinc-400'
-          } h-fit w-full p-2 bg-transparent rounded border focus:border-transparent focus:outline-1 focus:outline outline-white placeholder:text-zinc-400`}
+          } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
           placeholder="Message"
         />
         {errors.message && <ErrorMessage message={errors.message.message} />}
@@ -127,21 +127,21 @@ export function ContactForm() {
 
       <div>
         {loading && (
-          <span className="flex items-center gap-2 mt-2">
+          <span className="mt-2 flex items-center gap-2">
             <CircleNotch className="animate-spin" />
             Enviando Form...
           </span>
         )}
 
         {formSubmitted && (
-          <span className="flex items-center gap-2 mt-2">
+          <span className="mt-2 flex items-center gap-2">
             <Check />
             Formulário Enviado
           </span>
         )}
 
         {formError && (
-          <span className="flex items-center gap-2 mt-2">
+          <span className="mt-2 flex items-center gap-2">
             <WarningCircle />
             Erro no envio, tente novamente
           </span>
@@ -151,7 +151,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={formSubmitted}
-        className="disabled:cursor-not-allowed disabled:bg-transparent disabled:text-zinc-100 mt-2 w-max hover:scale-105 px-10 py-3 bg-zinc-200 text-black font-bold border border-zinc-500 rounded-lg hover:shadow-md hover:bg-[url(../assets/bg-stars.svg)] hover:bg-transparent hover:text-zinc-100 transition-all"
+        className="mt-2 w-max rounded-lg border border-zinc-500 bg-zinc-200 px-10 py-3 font-bold text-black transition-all hover:scale-105 hover:bg-transparent hover:bg-[url(../assets/bg-stars.svg)] hover:text-zinc-100 hover:shadow-md disabled:cursor-not-allowed disabled:bg-transparent disabled:text-zinc-100"
       >
         Submit
       </button>

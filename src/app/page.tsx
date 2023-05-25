@@ -15,10 +15,10 @@ import { Contact } from './components/Contact'
 
 export default async function Home() {
   return (
-    <div className="max-w-7xl w-full flex-1 flex-col items-center px-5 my-10">
+    <div className="my-10 w-full max-w-7xl flex-1 flex-col items-center px-5">
       {/* About me */}
 
-      <div className="flex flex-col items-center gap-5 bg-zinc-700/80 rounded p-5 border-b border-zinc-500 shadow-md">
+      <div className="flex flex-col items-center gap-5 rounded border-b border-zinc-500 bg-zinc-700/80 p-5 shadow-md">
         <Image
           src={githubPhoto}
           width={200}
@@ -26,8 +26,8 @@ export default async function Home() {
           alt="My profile photo"
           className="rounded-full"
         />
-        <div className="max-w-xl text-center flex flex-col gap-2">
-          <h1 className="text-xl font-bold flex items-center justify-center">
+        <div className="flex max-w-xl flex-col gap-2 text-center">
+          <h1 className="flex items-center justify-center text-xl font-bold">
             Hey, I&apos;m John <div className="animate-wiggle"> 👋</div>
           </h1>
           <p className="text-zinc-400">
@@ -39,7 +39,7 @@ export default async function Home() {
 
         {/* Socials */}
 
-        <div className="text-zinc-400 flex items-center gap-2">
+        <div className="flex items-center gap-2 text-zinc-400">
           <Link
             href="https://www.instagram.com/jooao.victor_/"
             className="transition-all hover:scale-110 hover:text-zinc-300"
@@ -66,9 +66,9 @@ export default async function Home() {
 
       {/* Skills */}
 
-      <div className="flex flex-col items-center mt-5 pt-5 text-zinc-100 gap-2 border-b border-zinc-500 bg-zinc-700/80 rounded p-5 shadow-md">
-        <h2 className="font-bold text-lg">Skills</h2>
-        <div className="grid sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-5 grid-cols-1 gap-5 w-full">
+      <div className="mt-5 flex flex-col items-center gap-2 rounded border-b border-zinc-500 bg-zinc-700/80 p-5 pt-5 text-zinc-100 shadow-md">
+        <h2 className="text-lg font-bold">Skills</h2>
+        <div className="grid w-full  grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
           <SkillCard name="HTML" SkillIcon={HTMLIcon} />
           <SkillCard name="CSS" SkillIcon={CssIcon} />
           <SkillCard name="JavaScript" SkillIcon={JavaScriptIcon} />
@@ -80,7 +80,7 @@ export default async function Home() {
 
       {/* Contact */}
 
-      <div className="flex justify-center mt-5 pt-5 border-b border-zinc-500 bg-zinc-700/80 rounded p-5 shadow-md">
+      <div className="mt-5 flex justify-center rounded border-b border-zinc-500 bg-zinc-700/80 p-5 pt-5 shadow-md">
         <Contact />
       </div>
     </div>

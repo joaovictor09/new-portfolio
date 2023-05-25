@@ -7,44 +7,44 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="flex items-center justify-center w-full p-5 py-3 shadow-md border-b border-zinc-500">
-      <div className="flex flex-col md:flex-row gap-2 items-center text-center md:gap-10 max-w-7xl">
+    <header className="flex w-full items-center justify-center border-b border-zinc-500 p-5 py-3 shadow-md">
+      <div className="flex max-w-7xl flex-col items-center gap-2 text-center md:flex-row md:gap-10">
         <Link
           href="/"
-          className={`hover:text-zinc-100 transition-all border-b border-transparent p-2 ${
+          className={`border-b border-transparent p-2 transition-all hover:text-zinc-100 ${
             pathname === '/'
               ? 'border-white'
-              : 'hover:border-zinc-500 text-zinc-300'
+              : 'text-zinc-300 hover:border-zinc-500'
           }`}
         >
           About me
         </Link>
         <Link
           href="/projects"
-          className={`hover:text-zinc-100 transition-all border-b border-transparent p-2 ${
+          className={`border-b border-transparent p-2 transition-all hover:text-zinc-100 ${
             pathname === '/projects'
               ? 'border-white'
-              : 'hover:border-zinc-500 text-zinc-300'
+              : 'text-zinc-300 hover:border-zinc-500'
           }`}
         >
           Projects
         </Link>
         <Link
           href="/contact"
-          className={`hover:text-zinc-100 transition-all border-b border-transparent p-2 ${
+          className={`border-b border-transparent p-2 transition-all hover:text-zinc-100 ${
             pathname === '/contact'
               ? 'border-white'
-              : 'hover:border-zinc-500 text-zinc-300'
+              : 'text-zinc-300 hover:border-zinc-500'
           }`}
         >
           Contact
         </Link>
         <Link
           href="/comments"
-          className={`hover:text-zinc-100 transition-all border-b border-transparent p-2 ${
+          className={`border-b border-transparent p-2 transition-all hover:text-zinc-100 ${
             pathname === '/comments'
               ? 'border-white'
-              : 'hover:border-zinc-500 text-zinc-300'
+              : 'text-zinc-300 hover:border-zinc-500'
           }`}
         >
           Comments

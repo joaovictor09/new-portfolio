@@ -27,8 +27,8 @@ export default async function Projects() {
   const repos = reposSchema.parse(data)
 
   return (
-    <div className="max-w-7xl w-full flex-1 flex-col items-center px-5 my-10 ">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 bg-zinc-700/50 rounded p-5 border-b border-zinc-500 shadow-md bg-[url(../assets/bg-stars.svg)]">
+    <div className="my-10 w-full max-w-7xl flex-1 flex-col items-center px-5 ">
+      <div className="grid w-full grid-cols-1 gap-5 rounded border-b border-zinc-500 bg-zinc-700/50 bg-[url(../assets/bg-stars.svg)] p-5 shadow-md md:grid-cols-2 lg:grid-cols-4">
         {repos.map((repo) => (
           <Repository
             key={repo.id}
@@ -40,7 +40,7 @@ export default async function Projects() {
         ))}
       </div>
 
-      <div className="flex justify-center mt-5 pt-5 border-b border-zinc-500 bg-zinc-700 rounded p-5 shadow-md">
+      <div className="mt-5 flex justify-center rounded border-b border-zinc-500 bg-zinc-700 p-5 pt-5 shadow-md">
         <Contact />
       </div>
     </div>
