@@ -16,7 +16,7 @@ export default async function Projects() {
   const res = await fetch('https://api.github.com/users/joaovictor09/repos', {
     cache: 'default',
     next: {
-      revalidate: 60 * 60 * 1, // 60 minutes
+      revalidate: 60 * 30, // 30 minutes
     },
   })
 

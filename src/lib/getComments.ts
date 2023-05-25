@@ -12,7 +12,7 @@ const commentsSchema = z
 export type commentsPropsType = z.infer<typeof commentsSchema>
 
 export async function getComments() {
-  console.log(process.env.NODE_ENV)
+  console.log(typeof process.env.NODE_ENV)
   console.log(checkEnvironment().concat('/api/comments'))
   const res = await fetch(checkEnvironment().concat('/api/comments'), {
     cache: 'no-store',
