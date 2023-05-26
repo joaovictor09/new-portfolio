@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.className} max-w-screen relative flex h-screen flex-col items-center overflow-x-clip bg-purple-900/95 bg-[url(../assets/bg-stars.svg)] text-zinc-100`}
+        className={`${inter.className} max-w-screen relative flex h-screen flex-col items-center bg-purple-900/95 bg-[url(../assets/bg-stars.svg)] text-zinc-100`}
       >
         <Analytics />
         <Header />

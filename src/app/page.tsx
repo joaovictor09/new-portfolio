@@ -17,7 +17,7 @@ import { Contact } from './components/Contact'
 
 export default async function Home() {
   return (
-    <div className="my-10 w-full max-w-7xl flex-1 flex-col items-center px-5">
+    <div className="my-10 w-full max-w-7xl flex-1 flex-col items-center overflow-x-clip px-5">
       {/* About me */}
       <div className="relative flex flex-col items-center rounded border-b border-purple-950 bg-purple-900 bg-[url(../assets/bg-stars.svg)] p-5 shadow-2xl shadow-purple-950">
         <div className="absolute right-0 top-0 -z-10 aspect-square w-2/3 max-w-md -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600 opacity-80 blur-3xl" />
