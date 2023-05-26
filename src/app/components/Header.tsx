@@ -77,7 +77,7 @@ export function Header() {
                 : 'text-zinc-300 hover:border-zinc-500'
             }`}
           >
-            Teste
+            About me
           </Link>
           <Link
             href="/projects"
