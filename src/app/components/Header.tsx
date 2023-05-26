@@ -67,7 +67,7 @@ export function Header() {
         <div
           className={`${
             headerVisibility ? 'flex' : 'hidden'
-          } w-full flex-col items-center md:gap-10`}
+          } -mt-10 w-max flex-col items-center md:gap-10`}
         >
           <Link
             href="/"
