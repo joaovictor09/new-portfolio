@@ -66,7 +66,7 @@ export function Header() {
         </div>
         <div
           className={`${
-            headerVisibility ? 'flex animate-open' : 'hidden'
+            headerVisibility ? 'flex' : 'hidden'
           } w-full flex-col items-center md:gap-10`}
         >
           <Link

@@ -55,17 +55,17 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(60deg)' },
         },
-        open: {
-          '0%': { transform: 'translateY(-100%)', scaleY: '-100' },
-          '100%': { transform: 'translateY(0)', scaleY: '100%' },
-        },
+        // open: {
+        //   '0%': { transform: 'translateY(-100%)', scaleY: '-100' },
+        //   '100%': { transform: 'translateY(0)', scaleY: '100%' },
+        // },
       },
       blur: {
         full: '194px',
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-        open: 'open 0.2s ease-in-out',
+        // open: 'open 0.2s ease-in-out',
       },
     },
   },
