@@ -33,13 +33,13 @@ export default async function Home() {
         {/* About me */}
         <div className="relative z-10 flex flex-col items-center gap-5 ">
           <div className="absolute right-1/2 top-1/2 -z-10 h-full w-1/3 -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-80 blur-full" />
-          {/* <Image
+          <Image
             src={githubPhoto}
             width={200}
             height={200}
             alt="My profile photo"
             className="rounded-full"
-          /> */}
+          />
           <div className="flex max-w-xl flex-col gap-2 text-center">
             <h1 className="flex items-center justify-center text-xl font-bold">
               Hey, I&apos;m John 👨🏻‍🚀
