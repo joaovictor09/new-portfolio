@@ -28,7 +28,7 @@ export default async function Projects() {
 
   return (
     <div className="my-10 w-full max-w-7xl flex-1 flex-col items-center px-5 ">
-      <div className="grid w-full grid-cols-1 gap-5 rounded border-b border-zinc-500 bg-zinc-700/50 bg-[url(../assets/bg-stars.svg)] p-5 shadow-md md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid w-full grid-cols-1 gap-5 rounded border-purple-950 bg-gradient-to-r from-purple-900 to-purple-900/80 p-5 shadow-md md:grid-cols-2 lg:grid-cols-4">
         {repos.map((repo) => (
           <Repository
             key={repo.id}
@@ -40,7 +40,7 @@ export default async function Projects() {
         ))}
       </div>
 
-      <div className="mt-5 flex justify-center rounded border-b border-zinc-500 bg-zinc-700 p-5 pt-5 shadow-md">
+      <div className="mt-5 flex w-full max-w-7xl justify-center rounded border border-purple-950 bg-purple-900 p-5 pt-5 shadow-md shadow-purple-950">
         <Contact />
       </div>
     </div>

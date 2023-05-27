@@ -59,13 +59,24 @@ module.exports = {
         //   '0%': { transform: 'translateY(-100%)', scaleY: '-100' },
         //   '100%': { transform: 'translateY(0)', scaleY: '100%' },
         // },
+        'bounce-rocket': {
+          '0%, 100%': {
+            transform: 'none',
+            animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+          },
+          '50%': {
+            transform: 'translateY(-25%) translateX(25%)',
+            animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
+          },
+        },
       },
       blur: {
         full: '194px',
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-        // open: 'open 0.2s ease-in-out',
+        'spin-slow': 'spin 3s linear infinite',
+        'bounce-rocket': 'bounce-rocket 1s infinite',
       },
     },
   },
