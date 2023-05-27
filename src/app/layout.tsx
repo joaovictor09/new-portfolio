@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.className} max-w-screen relative flex h-screen flex-1 flex-col items-center overflow-x-clip bg-gradient-radial from-purple-900 to-purple-900/95 bg-clip-content text-zinc-100`}
+        className={`${inter.className} max-w-screen relative flex h-screen flex-1 flex-col items-center overflow-x-clip bg-gradient-radial from-purple-950 to-gray-900 bg-clip-content text-zinc-100`}
       >
         <Analytics />
         {/* Stars */}

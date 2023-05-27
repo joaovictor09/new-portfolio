@@ -56,7 +56,7 @@ export function CommentForm() {
   return (
     <form
       onSubmit={handleSubmit(handleCommentFormSubmit)}
-      className="flex w-full max-w-xl flex-col items-center gap-5 rounded border-b border-zinc-500 bg-zinc-700/90 p-5 shadow-md"
+      className="flex w-full max-w-xl flex-col items-center gap-5 rounded border border-purple-600 bg-gradient-to-r from-purple-900 to-purple-900/80 p-5 shadow-md shadow-purple-950"
     >
       <h2>Leave your comment 😉</h2>
       <input

@@ -10,7 +10,7 @@ import NodeJsIcon from '../assets/Nodejs.svg'
 import ReactIcon from '../assets/React.svg'
 import TypescriptIcon from '../assets/Typescript.svg'
 import githubPhoto from '../assets/github-profile-image.jpeg'
-import planet from '../assets/planet.png'
+import planet from '../assets/planet1.png'
 import astronaut from '../assets/astronaut.png'
 
 import { SkillCard } from './components/SkillCard'
@@ -20,14 +20,12 @@ export default async function Home() {
   return (
     <div className="my-10 flex w-full flex-1 flex-col items-center justify-center overflow-x-clip px-5">
       {/* About me card */}
-      <div className="relative flex w-full max-w-7xl flex-col items-center rounded  border border-purple-950 bg-gradient-to-r from-purple-900 to-purple-900/80 p-5 shadow-md shadow-purple-950">
+      <div className="relative flex w-full max-w-7xl flex-col items-center rounded border border-purple-600 bg-gradient-to-r from-purple-900 to-purple-900/80 p-5 shadow-md shadow-purple-950">
         {/* First Planet */}
 
         <div className="absolute right-0 top-0 -z-10 aspect-square w-2/3 max-w-md -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600 opacity-80 blur-3xl" />
         <Image
           src={planet}
-          // width={200}
-          // height={200}
           alt="My profile photo"
           className="absolute right-0 top-0 -z-10 aspect-square w-full max-w-xl -translate-y-1/2 translate-x-1/2 transition-all"
         />
@@ -42,6 +40,7 @@ export default async function Home() {
               width={200}
               height={200}
               alt="My profile photo"
+              placeholder="blur"
               className="rounded-full border-2 border-white"
             />
           </div>
@@ -88,12 +87,13 @@ export default async function Home() {
 
       {/* Skills */}
       <div className="relative flex w-full max-w-7xl justify-center">
+        {/* Astronaut */}
         <Image
           src={astronaut}
           className="absolute left-0 top-0 -z-10 -translate-x-1/2 -translate-y-1/3 scale-75 "
           alt="Astronaut"
         />
-        <div className="mt-5 flex w-full flex-col items-center gap-2 rounded border border-purple-950 bg-gradient-to-l from-purple-900 to-purple-900/80 p-5 pt-5 text-zinc-100 shadow-md shadow-purple-950">
+        <div className="mt-5 flex w-full flex-col items-center gap-2 rounded border border-purple-600 bg-gradient-to-l from-purple-900 to-purple-900/80 p-5 pt-5 text-zinc-100 shadow-md shadow-purple-950">
           <h2 className="text-lg font-bold">Skills</h2>
           <div className="grid w-full  grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
             <SkillCard name="HTML" SkillIcon={HTMLIcon} />
@@ -109,7 +109,7 @@ export default async function Home() {
 
       {/* Contact */}
 
-      <div className="mt-5 flex w-full max-w-7xl justify-center rounded border border-purple-950 bg-purple-900 p-5 pt-5 shadow-md shadow-purple-950">
+      <div className="mt-5 flex w-full max-w-7xl justify-center rounded border border-purple-600 bg-purple-900 p-5 pt-5 shadow-md shadow-purple-950">
         <Contact />
       </div>
     </div>

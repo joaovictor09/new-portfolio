@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export function Contact() {
   return (
-    <div className="perspective flex w-full max-w-xl flex-col items-center justify-center gap-3 text-center">
-      <h2 className="text-lg font-bold">Get In Touch</h2>
+    <div className="flex w-full max-w-xl flex-col items-center justify-center gap-3 text-center">
+      <h2 className="text-lg font-bold">Get In Touch 🖖</h2>
       <p className=" text-zinc-300">
         If you want us to work together, have any questions, my inbox is always
         open. Whether I just want to say hi, I&apos;ll try my best to get back
