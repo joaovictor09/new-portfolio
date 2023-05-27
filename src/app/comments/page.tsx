@@ -4,29 +4,10 @@ import { Comment } from './components/Comment'
 import { CommentForm } from './components/CommentForm'
 import planet from '../../assets/planet.png'
 import astronaut from '../../assets/astronaut.png'
-// import { getComments } from '../../lib/getComments'
+import { getComments } from '../../lib/getComments'
 
 export default async function Comments() {
-  // const comments = await getComments()
-  // console.log(comments)
-
-  const comments = [
-    {
-      id: '5130b0ea-1559-40d5-95fe-2d5c47ea65b0',
-      user: 'João Victor',
-      comment: 'Primeiro comentário',
-    },
-    {
-      id: '5130b0ea-1559-40d5-95fe-2d5c47ea65b0',
-      user: 'João Victor',
-      comment: 'Primeiro comentário',
-    },
-    {
-      id: '5130b0ea-1559-40d5-95fe-2d5c47ea65b0',
-      user: 'João Victor',
-      comment: 'Primeiro comentário',
-    },
-  ]
+  const comments = await getComments()
 
   return (
     <main className="my-10 flex w-full flex-1 flex-col items-center gap-5 overflow-x-clip px-5">
