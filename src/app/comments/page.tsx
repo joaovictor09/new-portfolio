@@ -4,7 +4,7 @@ import { Comment } from './components/Comment'
 import { CommentForm } from './components/CommentForm'
 import planet from '../../assets/planet4.png'
 import astronaut from '../../assets/astronaut4.png'
-// import { getComments } from '../../lib/getComments'
+import { getComments } from '../../lib/getComments'
 
 export default async function Comments() {
   const comments = await getComments()
