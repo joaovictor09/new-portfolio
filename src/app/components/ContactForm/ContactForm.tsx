@@ -41,6 +41,7 @@ export function ContactForm() {
     name,
   }: SendMessageFormData) {
     setLoading(true)
+
     await emailjs
       .send(
         'service_xb9td8u',
