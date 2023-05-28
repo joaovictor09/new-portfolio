@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 import { Comment } from './components/Comment'
 import { CommentForm } from './components/CommentForm'
-import planet from '../../assets/planet.png'
-import astronaut from '../../assets/astronaut.png'
-import { getComments } from '../../lib/getComments'
+import planet from '../../assets/planet4.png'
+import astronaut from '../../assets/astronaut4.png'
+// import { getComments } from '../../lib/getComments'
 
 export default async function Comments() {
   const comments = await getComments()
@@ -23,11 +23,11 @@ export default async function Comments() {
 
         <div className="relative grid w-full grid-cols-1 gap-5 rounded border border-purple-600 bg-gradient-to-l from-purple-900 to-purple-900/80 p-5 shadow-md shadow-purple-950 md:grid-cols-2">
           {/* Planet */}
-          <div className="absolute left-0 top-0 -z-10 aspect-square w-2/3 max-w-md -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-600 opacity-80 blur-3xl" />
+          <div className="absolute left-0 top-0 -z-10 aspect-square w-2/3 max-w-md -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500/70 opacity-80 blur-3xl" />
           <Image
             src={planet}
             alt="My profile photo"
-            className="absolute left-0 top-0 -z-10 aspect-square w-full max-w-xl -translate-x-1/2 -translate-y-1/2 transition-all"
+            className="absolute left-0 top-0 -z-10 aspect-square w-full max-w-md -translate-x-1/2 -translate-y-1/2 transition-all"
           />
 
           {/* Comment Cards */}

@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 import { Contact } from '../components/Contact'
 import { Repository } from '../components/Repository'
-import planet from '../../assets/planet.png'
-import astronaut from '../../assets/astronaut.png'
+import planet from '../../assets/planet2.svg'
+import astronaut from '../../assets/astronaut3.webp'
 
 const reposSchema = z.array(
   z.object({
@@ -34,11 +34,11 @@ export default async function Projects() {
     <div className="relative my-5 flex w-full flex-1 flex-col items-center justify-center overflow-x-clip">
       <div className="relative my-10 w-full max-w-7xl flex-1 flex-col items-center px-5 ">
         {/* Planet */}
-        <div className="absolute left-0 top-0 -z-10 aspect-square w-2/3 max-w-md -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-600 opacity-80 blur-3xl" />
+        <div className="absolute left-0 top-0 -z-10 aspect-square w-2/3 max-w-sm -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600 opacity-80 blur-3xl" />
         <Image
           src={planet}
           alt="My profile photo"
-          className="absolute left-0 top-0 -z-10 aspect-square w-full max-w-xl -translate-x-1/2 -translate-y-1/2 transition-all"
+          className="absolute left-0 top-0 -z-10 aspect-square w-full max-w-sm -translate-x-1/2 -translate-y-1/2 transition-all"
         />
 
         <div className="grid w-full grid-cols-1 gap-5 rounded border border-purple-600 bg-gradient-to-l from-purple-900 to-purple-900/80 p-5 shadow-md md:grid-cols-2 lg:grid-cols-4">
