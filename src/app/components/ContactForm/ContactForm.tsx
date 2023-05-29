@@ -41,6 +41,7 @@ export function ContactForm() {
     name,
   }: SendMessageFormData) {
     setLoading(true)
+
     await emailjs
       .send(
         process.env.EMAIL_JS_SERVICE_ID!,
