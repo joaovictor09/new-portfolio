@@ -16,6 +16,8 @@ export function AboutMe() {
         height={500}
         alt="My profile photo"
         className="absolute right-0 top-0 -z-10 aspect-square w-full max-w-xl -translate-y-1/2 translate-x-1/2 transition-all"
+        priority
+        placeholder="blur"
       />
 
       {/* About me */}
