@@ -17,6 +17,7 @@ export default async function Comments() {
           src={astronaut}
           className="absolute right-0 top-10 -z-10 -translate-y-1/3 translate-x-1/2 scale-75 -scale-x-75 transform"
           alt="Astronaut"
+          width={500}
         />
         <h1 className="text-xl font-bold">Comments</h1>
 
@@ -28,6 +29,7 @@ export default async function Comments() {
           <Image
             src={planet}
             alt="My profile photo"
+            width={500}
             className="absolute left-0 top-0 -z-10 aspect-square w-full max-w-md -translate-x-1/2 -translate-y-1/2 transition-all"
           />
 
