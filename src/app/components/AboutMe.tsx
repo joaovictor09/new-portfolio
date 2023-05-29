@@ -9,13 +9,12 @@ export function AboutMe() {
     <div className="relative flex w-full max-w-7xl flex-col items-center rounded border border-purple-600 bg-gradient-to-r from-purple-900 to-purple-900/80 p-5 shadow-md shadow-purple-950">
       {/* First Planet */}
 
-      <div className="absolute right-0 top-0 -z-10 aspect-square w-2/3 max-w-md -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600 opacity-80 blur-3xl" />
+      <div className="absolute right-0 top-0 -z-10 aspect-square w-2/3 max-w-[md] -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600 opacity-80 blur-3xl" />
       <Image
         src={planet}
         width={500}
-        height={500}
         alt="My profile photo"
-        className="absolute right-0 top-0 -z-10 aspect-square w-full max-w-xl -translate-y-1/2 translate-x-1/2 transition-all"
+        className="absolute right-0 top-0 -z-10 aspect-square w-full max-w-xl -translate-y-1/2 translate-x-1/2"
         priority
         placeholder="blur"
       />
