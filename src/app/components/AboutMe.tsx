@@ -12,6 +12,8 @@ export function AboutMe() {
       <div className="absolute right-0 top-0 -z-10 aspect-square w-2/3 max-w-md -translate-y-1/2 translate-x-1/2 rounded-full bg-orange-600 opacity-80 blur-3xl" />
       <Image
         src={planet}
+        width={500}
+        height={500}
         alt="My profile photo"
         className="absolute right-0 top-0 -z-10 aspect-square w-full max-w-xl -translate-y-1/2 translate-x-1/2 transition-all"
         priority
