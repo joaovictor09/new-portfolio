@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { SkillCard } from './SkillCard'
-import astronaut from '../../assets/astronaut.png'
+import astronaut from '../../assets/astronaut.webp'
 
 import CssIcon from '../../assets/CSS3.svg'
 import HTMLIcon from '../../assets/HTML5.svg'

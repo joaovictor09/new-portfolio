@@ -43,8 +43,8 @@ export function ContactForm() {
     setLoading(true)
     await emailjs
       .send(
-        'service_xb9td8u',
-        'template_33n7uut',
+        process.env.EMAIL_JS_SERVICE_ID!,
+        process.env.EMAIL_JS_TEMPLATE_ID!,
         {
           from_name: name,
           message,
