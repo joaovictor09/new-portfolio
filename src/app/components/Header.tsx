@@ -60,7 +60,10 @@ export function Header() {
 
       <div className="flex w-full max-w-7xl flex-col items-center gap-2 text-center sm:hidden">
         <div className="flex w-full items-center justify-end">
-          <button onClick={() => setHeaderVisibility(!headerVisibility)}>
+          <button
+            aria-label="Open/Close natigation menu"
+            onClick={() => setHeaderVisibility(!headerVisibility)}
+          >
             {headerVisibility ? <X /> : <Menu />}
           </button>
         </div>
