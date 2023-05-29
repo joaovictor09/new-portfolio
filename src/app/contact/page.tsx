@@ -11,12 +11,14 @@ export default function Contact() {
         <Image
           src={planet}
           alt="My profile photo"
+          width={500}
           className="absolute right-0 top-0 -z-10 aspect-square w-full max-w-xl -translate-y-1/2 translate-x-1/2 transition-all"
         />
         <Image
           src={astronaut}
           className="absolute bottom-0 left-0 -z-10 -translate-x-1/2 translate-y-1/3 scale-75 -scale-x-75 "
           alt="Astronaut"
+          width={500}
         />
         <h1 className="text-xl font-bold">Contact Us 👋</h1>
         <ContactForm />

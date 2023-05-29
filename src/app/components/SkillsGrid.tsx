@@ -18,6 +18,7 @@ export function SkillsGrid() {
       <Image
         src={astronaut}
         className="absolute left-0 top-0 -z-10 -translate-x-1/2 -translate-y-1/3 scale-75 "
+        width={500}
         alt="Astronaut"
       />
       <div className="mt-5 flex w-full flex-col items-center gap-2 rounded border border-purple-600 bg-gradient-to-l from-purple-900 to-purple-900/80 p-5 pt-5 text-zinc-100 shadow-md shadow-purple-950">
