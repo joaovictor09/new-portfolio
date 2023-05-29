@@ -1,5 +1,5 @@
 import { ContactForm } from '../components/ContactForm/ContactForm'
-import planet from '../../assets/planet3.png'
+import planet from '../../assets/planet3.webp'
 import astronaut from '../../assets/astronaut2.webp'
 import Image from 'next/image'
 

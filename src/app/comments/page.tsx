@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 import { Comment } from './components/Comment'
 import { CommentForm } from './components/CommentForm'
-import planet from '../../assets/planet4.png'
-import astronaut from '../../assets/astronaut4.png'
+import planet from '../../assets/planet4.webp'
+import astronaut from '../../assets/astronaut4.webp'
 import { getComments } from '../../lib/getComments'
 
 export default async function Comments() {

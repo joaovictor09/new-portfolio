@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { Contact } from '../components/Contact'
 import { Repository } from '../components/Repository'
-import planet from '../../assets/planet2.svg'
+import planet from '../../assets/planet2.webp'
 import astronaut from '../../assets/astronaut3.webp'
 
 const reposSchema = z.array(

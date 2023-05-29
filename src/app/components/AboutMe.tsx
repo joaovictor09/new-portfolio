@@ -1,7 +1,7 @@
 import { Instagram, Github, Linkedin } from 'lucide-react'
 import Image from 'next/image'
 import githubPhoto from '../../assets/github-profile-image.jpeg'
-import planet from '../../assets/planet.png'
+import planet from '../../assets/planet.webp'
 import { SocialLink } from './SocialLink'
 
 export function AboutMe() {

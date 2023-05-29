@@ -10,6 +10,10 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    EMAIL_JS_SERVICE_ID: 'service_xb9td8u',
+    EMAIL_JS_TEMPLATE_ID: 'template_33n7uut',
+  },
 }
 
 module.exports = nextConfig
