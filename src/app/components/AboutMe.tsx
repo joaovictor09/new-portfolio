@@ -50,13 +50,19 @@ export function AboutMe() {
 
       {/* Socials */}
       <div className="mt-4 flex max-w-7xl items-center gap-2 text-zinc-300">
-        <SocialLink href="https://www.instagram.com/jooao.victor_/">
+        <SocialLink
+          name="Instagram"
+          href="https://www.instagram.com/jooao.victor_/"
+        >
           <Instagram size={24} />
         </SocialLink>
-        <SocialLink href="https://github.com/joaovictor09">
+        <SocialLink name="Github" href="https://github.com/joaovictor09">
           <Github size={24} />
         </SocialLink>
-        <SocialLink href="https://www.linkedin.com/in/joaovictor09/">
+        <SocialLink
+          name="Linkedin"
+          href="https://www.linkedin.com/in/joaovictor09/"
+        >
           <Linkedin size={24} />
         </SocialLink>
       </div>
