@@ -72,7 +72,10 @@ Se você quiser contribuir para este projeto e torná-lo melhor, siga estas etap
 5. Abra um Pull Request
 
 ## Contato
-Website: joaovictor09.dev
-LinkedIn: [Seu Perfil do LinkedIn](https://www.linkedin.com/in/joaovictor09/)
-E-mail: joaovictor0911@gmail.com
+Website: https://joaovictor09.dev
+
+LinkedIn: https://www.linkedin.com/in/joaovictor09/
+
+E-mail: [joaovictor0911@gmail.com](mailto:joaovictor0911@gmail.com)
+
 Espero que goste do meu portfólio! Fique à vontade para explorar meus projetos e entrar em contato comigo para qualquer consulta ou oportunidade de colaboração.
