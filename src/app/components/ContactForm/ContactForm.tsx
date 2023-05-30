@@ -100,7 +100,7 @@ export function ContactForm() {
           {...register('name')}
           type="text"
           className={`${
-            errors.name ? 'border-red-500' : 'border-zinc-400'
+            errors.name ? 'border-red-500' : 'border-purple-400'
           } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
           placeholder="Your name"
         />
@@ -110,7 +110,7 @@ export function ContactForm() {
           {...register('email')}
           type="email"
           className={`${
-            errors.email ? 'border-red-500' : 'border-zinc-400'
+            errors.email ? 'border-red-500' : 'border-purple-400'
           } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
           placeholder="Your email"
         />
@@ -119,7 +119,7 @@ export function ContactForm() {
         <textarea
           {...register('message')}
           className={`${
-            errors.message ? 'border-red-500' : 'border-zinc-400'
+            errors.message ? 'border-red-500' : 'border-purple-400'
           } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
           placeholder="Message"
         />
