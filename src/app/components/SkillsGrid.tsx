@@ -17,12 +17,12 @@ export function SkillsGrid() {
       {/* Astronaut */}
       <Image
         src={astronaut}
-        className="absolute left-0 top-0 -z-10 -translate-x-1/2 -translate-y-1/3 scale-75 "
+        className="absolute left-0 top-0 -z-10 aspect-square w-full -translate-x-1/2 -translate-y-1/3 scale-75 sm:w-1/2 lg:w-1/3"
         width={500}
         alt="Astronaut"
       />
       <div className="mt-5 flex w-full flex-col items-center gap-2 rounded border border-purple-600 bg-gradient-to-l from-purple-900 to-purple-900/80 p-5 pt-5 text-zinc-100 shadow-md shadow-purple-950">
-        <h2 className="text-lg font-bold">Skills</h2>
+        <h2 className="text-lg font-bold">Skills ☄️</h2>
         <div className="grid w-full  grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
           <SkillCard name="HTML" SkillIcon={HTMLIcon} />
           <SkillCard name="CSS" SkillIcon={CssIcon} />

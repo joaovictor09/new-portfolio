@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function Contact() {
   return (
-    <div className="flex w-full max-w-xl flex-col items-center justify-center gap-3 text-center">
+    <div className="flex w-full max-w-xl flex-col items-center justify-center gap-3 text-center ">
       <h2 className="text-lg font-bold">Get In Touch 🖖</h2>
       <p className=" text-zinc-300">
         If you want us to work together, have any questions, my inbox is always

@@ -52,11 +52,17 @@ export default async function Projects() {
               url={repo.html_url}
             />
           ))}
+          <Repository
+            description="Prepare-se para a chegada de emocionantes novos projetos que em breve desembarcarão em nosso planeta. Com uma fusão de tecnologia de ponta e criatividade intergaláctica, essas criações prometem inspirar, inovar e elevar a exploração espacial a novos patamares. Fique atento às próximas atualizações e embarque nessa jornada de descobertas!"
+            language="Indefinida"
+            name="Rumo à Terra: Novos projetos a caminho!"
+            url="/"
+          />
         </div>
 
         {/* Contact */}
 
-        <div className="relative mt-5 flex w-full max-w-7xl justify-center rounded border border-purple-950 bg-gradient-to-r from-purple-900 to-purple-900/80 p-5 pt-5 shadow-md shadow-purple-950">
+        <div className="relative mt-5 flex w-full max-w-7xl justify-center rounded border border-purple-600 bg-gradient-to-r from-purple-900 to-purple-900/80 p-5 pt-5 shadow-md shadow-purple-950">
           {/* Astronaut */}
           <Image
             src={astronaut}

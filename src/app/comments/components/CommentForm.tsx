@@ -64,14 +64,14 @@ export function CommentForm() {
         placeholder="Your name"
         {...register('user')}
         className={`${
-          errors.user ? 'border-red-500' : 'border-zinc-400'
+          errors.user ? 'border-red-500' : 'border-purple-400'
         } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
       />
       <textarea
         placeholder="Your comment"
         {...register('comment')}
         className={`${
-          errors.comment ? 'border-red-500' : 'border-zinc-400'
+          errors.comment ? 'border-red-500' : 'border-purple-400'
         } h-fit w-full rounded border bg-transparent p-2 outline-white placeholder:text-zinc-400 focus:border-transparent focus:outline focus:outline-1`}
       />
 
