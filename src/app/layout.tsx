@@ -1,11 +1,11 @@
-import { ReactNode } from 'react'
-import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import { Inter } from 'next/font/google'
+import { ReactNode } from 'react'
 
+import Script from 'next/script'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import './globals.css'
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
